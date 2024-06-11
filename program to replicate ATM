@@ -1,0 +1,62 @@
+bal=5000
+cash=4000
+pin=1234
+ch='y'
+while ch=='y':
+    print('/n1.Deposite /n2.Withdraw /n3.Balance enquiry /n4.Pin change')
+    opt=int(input('Enter your choice'))
+    if opt==1:
+        p=int(input('Enter the pin:'))
+        if p==pin:
+            am=int(input('Enter the amount:'))
+            if am%100==0:
+                if am<=bal:
+                    if am<=cash:
+                        print('successful deposite')
+                        amount=bal-am
+                    else:
+                        print('insufficient cash')
+                else:
+                    print('insufficient balance')
+            else:
+                print('Invalid amount')
+        else:
+            print('Invalid pin')
+    elif opt==2:
+        p=int(input('Enter the pin:'))
+        if p==pin:
+            am=int(input('Enter the amount:'))
+            if am%100==0:
+                if am<=bal:
+                    if am<=cash:
+                        print('successful withdrawal')
+                        amount=bal-am
+                    else:
+                        print('insufficient cash')
+                else:
+                    print('insufficient balance')
+            else:
+                print('Invalid amount')
+        else:
+            print('Invalid pin')
+    elif opt==3:
+        p=int(input('Enter the pin:'))
+        if p==pin:
+            
+            print('balance=',bal)
+        else:
+            print('Invalid pin')
+    elif opt==4:
+        p=int(input('Enter the pin:'))
+        if p==pin:
+            np=int(input('Enter the new pin:'))
+            np1=int(input('Confirm the new pin:'))
+            if np==np1:
+                print('pin changed succesfully')
+            else:
+                print('incorrect pin')
+        else:
+            print('Invalid pin')
+    else:
+        print('Invalid choice')
+    ch=input('Do you want to continue(y/s):')
