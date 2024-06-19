@@ -1,0 +1,9 @@
+def check(num):
+    if num&1==0:
+        r='even'
+    else:
+        r='odd'
+    return r
+x=int(input('check the number='))
+y=check(x)
+print(y)
