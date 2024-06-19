@@ -1,0 +1,8 @@
+def check(n):
+    
+    a=['even','odd']
+    r=a[n&1]
+    return r
+x=int(input('enter the number:'))
+b=check(x)
+print(b)
